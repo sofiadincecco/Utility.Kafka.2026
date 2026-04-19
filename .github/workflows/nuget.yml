@@ -12,16 +12,16 @@ jobs:
       contents: read
       packages: write
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup .NET
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 9.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore "Utility.Kafka.2026/Utility.Kafka.2026.csproj"
     - name: Build release
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore "Utility.Kafka.2026/Utility.Kafka.2026.csproj"
     - name: Pack
-      run: dotnet pack --no-restore --configuration Release
+      run: dotnet pack --no-restore --configuration Release "Utility.Kafka.2026/Utility.Kafka.2026.csproj"
     - name: Push
-      run: dotnet nuget push "*/bin/Release/*.nupkg" --source "sofiadincecco" --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push "Utility.Kafka.2026/bin/Release/*.nupkg" --source "sofiadincecco" --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}
