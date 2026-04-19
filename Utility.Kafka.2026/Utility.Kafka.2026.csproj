@@ -4,8 +4,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
-    <PackageVersion>2.0.1</PackageVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <PackageVersion>2.0.0</PackageVersion>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <InformationalVersion>$(PackageVersion)</InformationalVersion>
     <RepositoryUrl>https://github.com/Toooomm/Utility.Kafka.2025</RepositoryUrl>
